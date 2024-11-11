@@ -10,6 +10,12 @@ const rain_icon = '/images/Assets/rain.png';
 const snow_icon = '/images/Assets/snow.png';
 const wind_icon = '/images/Assets/wind.png';
 const mist_icon = '/images/Assets/mist.png';
+const night_icon = '/images/Assets/night.png';
+const rain_night_icon = '/images/Assets/night_rain.png';
+const night_clear_icon = '/images/Assets/night_clear.png';
+const night_snow_icon = '/images/Assets/night_snow.png';
+const fog_icon = '/images/Assets/fog.png';
+const drizzle_night_icon = '/images/Assets/drizzle_night.png';
 
 const SPINNER_SIZE = '4rem';
 const SPINNER_STYLE = {
@@ -30,23 +36,23 @@ const Weather = () => {
 
   const allIcons = {
     "01d": clear_icon,
-    "01n": clear_icon,
+    "01n": night_clear_icon,
     "02d": cloud_icon,
-    "02n": cloud_icon,
+    "02n": night_icon,
     "03d": cloud_icon,
-    "03n": cloud_icon,
+    "03n": night_icon,
     "04d": drizzle_icon,
-    "04n": drizzle_icon,
+    "04n": drizzle_night_icon,
     "09d": rain_icon,
-    "09n": rain_icon,
+    "09n": rain_night_icon,
     "10d": rain_icon,
-    "10n": rain_icon,
+    "10n": rain_night_icon,
     "11d": rain_icon,
-    "11n": rain_icon,
+    "11n": rain_night_icon,
     "13d": snow_icon,
-    "13n": snow_icon,
+    "13n": night_snow_icon,
     "50d": mist_icon,
-    "50n": mist_icon
+    "50n": fog_icon
   };
 
   const search = async (city) => {
