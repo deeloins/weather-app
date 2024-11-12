@@ -63,7 +63,9 @@ const Weather = () => {
 
     setLoading(true); // Show spinner
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0d9bed3fc58c2f439c9be4a09cf29e41`;
+     const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
 
       const response = await fetch(url);
       const data = await response.json();
